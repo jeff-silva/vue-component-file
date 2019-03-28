@@ -1,5 +1,6 @@
 Vue.componentFile = function(tagname, file) {
     Vue.component(tagname, function (resolve, reject) {
+        var $ = jQuery;
         $.get(file, function(resp) {
 
             var _templates={}, _function="", _style="", _assets=[];
